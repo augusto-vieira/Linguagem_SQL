@@ -2,6 +2,11 @@
 
 Structured Query Language, ou Linguagem de Consulta Estruturada ou SQL, é a linguagem de pesquisa declarativa padrão para banco de dados relacional (base de dados relacional).
 
+![bancoDedados](https://github.com/augusto-vieira/Linguagem_SQL/blob/master/img/DescricaoDB.png)
+
+![bancoDedados](https://github.com/augusto-vieira/Linguagem_SQL/blob/master/Gif/BancoDeDados.gif)
+
+
 A linguagem SQL é dividida em subconjuntos de acordo com as operações que queremos efetuar sobre um banco de dados. 
 
 1. **Podemos dividir em 3 partes:**
@@ -187,8 +192,8 @@ ADD PRIMARY KEY(idcursos);
 ### Manipulando Linhas (UPDATE, DELETE e TRUNCATE)
 Algumas literaturas podem se referir como Maninupalçao de Registros ou Manipulação de Tuplas.
 
-Tabela com linhas a ser modificadas:
-# Foto da Tabela  Cursos
+**Tabela com linhas a ser modificadas:**
+![TabelaCursos](https://github.com/augusto-vieira/Linguagem_SQL/blob/master/Gif/TabelaCursos.gif)
 
 **Alterar o nome da linha 1 :** 
 ``` SQL
@@ -197,7 +202,7 @@ update cursos
 set nome = 'HTML5'
 where idCurso = '1'; 
 ```
-# Foto alterar uma linha
+![AlterarUmaLinha](https://github.com/augusto-vieira/Linguagem_SQL/blob/master/Gif/AlterarUmaLinha.gif)
 
 
 Não é possível manipular várias linhas ao mesmo tempo(um comando para uma linha), mas é possível mexer dentro uma linha em diversas colunas ao mesmo tempo. 
@@ -208,7 +213,8 @@ update cursos
 set nome = 'PHP', ano = '2015'
 where idCurso = '4';
 ```
-# Foto modificando duas Colunas
+![AlterarDuasColunas](https://github.com/augusto-vieira/Linguagem_SQL/blob/master/Gif/AlterarDuasColunas.gif)
+
 É possível que em alguns casos o comando possa apagar mais de uma linha, por
 precaução é conveniente usar o parâmetro LIMIT.
 
@@ -220,7 +226,7 @@ set nome = 'Java',carga = '40', ano = '2015'
 where idCurso = '5'
 LIMIT 1;
 ```
-# FOTO Limit
+![AlterarDuasColunas](https://github.com/augusto-vieira/Linguagem_SQL/blob/master/Gif/ParametroLimit.gif)
 
 **Remover uma linha específica :** 
 ``` SQL 
