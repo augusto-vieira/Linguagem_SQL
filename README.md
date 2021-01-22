@@ -58,7 +58,7 @@ Nome varchar(30),
 Idade tinyist,
 Sexo char
 Peso float,
-Altura float
+Altura float,
 Nacionalidade varchar()
 );
 ```
@@ -72,9 +72,8 @@ sexo enum('M','F’),
 peso decimal(5,2),
 altura decimal(3,2),
 nacionalidade varchar(20) default 'Brasil’,
-primary key(id)pessoas
+primary key (id)
 )default charset=utf8; 
-);
 ```
 
 
@@ -97,6 +96,7 @@ DROP DATABASE cadastro;
 
 **Inserir dados em uma Tabela :**
 ``` SQL
+# Inserir Linhas
 INSERT INTO pessoas VALUES(
 default, 'Carlos', '1920-12-30', 'M', '65.0', '1.94', 'Italia');
 ```
@@ -184,10 +184,67 @@ ADD PRIMARY KEY(idcursos);
 ```
 
 
+### Manipulando Linhas (UPDATE, DELETE e TRUNCATE)
+Algumas literaturas podem se referir como Maninupalçao de Registros ou Manipulação de Tuplas.
+
+Tabela com linhas a ser modificadas:
+# Foto da Tabela  Cursos
+
+**Alterar o nome da linha 1 :** 
+``` SQL
+# A chave primaria(idCurso) identifica cada linha
+update cursos 
+set nome = 'HTML5'
+where idCurso = '1'; 
+```
+# Foto alterar uma linha
+
+
+Não é possível manipular várias linhas ao mesmo tempo(um comando para uma linha), mas é possível mexer dentro uma linha em diversas colunas ao mesmo tempo. 
+
+**Modificar duas colunas com um unico comando :** 
+``` SQL
+update cursos 
+set nome = 'PHP', ano = '2015'
+where idCurso = '4';
+```
+# Foto modificando duas Colunas
+É possível que em alguns casos o comando possa apagar mais de uma linha, por
+precaução é conveniente usar o parâmetro LIMIT.
+
+**Parâmetro LIMIT :** 
+``` SQL
+# Limita a quantidade de linhas que irá ser modificada(uma proteção)
+update cursos 
+set nome = 'Java',carga = '40', ano = '2015'
+where idCurso = '5'
+LIMIT 1;
+```
+# FOTO Limit
+
+**Remover uma linha específica :** 
+``` SQL 
+DELETE FROM cursos
+WHERE idCurso = '8';
+```
+
+**Remover diversas linhas de uma vez :** 
+``` SQL 
+# Coluna ano, onde tiver o valor 2018 será apagado
+DELETE FROM cursos
+WHERE ano ='2018'
+LIMIT 3;
+```
+**Remover TODAS as linhas :** 
+``` SQL
+TRUNCATE TABLE cursos;
+```
+
 ### Referência:
 - https://www.youtube.com/watch?v=Ofktsne-utM&list=PLHz_AreHm4dkBs-795Dsgvau_ekxg8g1r&ab_channel=CursoemV%C3%ADdeo
     
     - contato@cursoemvideo.com
+- https://www.mysql.com/
 - https://pt.wikipedia.org/wiki/SQL
 
 
