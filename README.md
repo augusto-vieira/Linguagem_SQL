@@ -266,7 +266,8 @@ TRUNCATE TABLE cursos;
     - Saída:
         - Dump20210209.sql
 
-# Gif Export DB
+![ExportDump](https://github.com/augusto-vieira/Linguagem_SQL/blob/master/Gif/DumpExport.gif)
+
 
 1. **Importar um Dump para o Banco de Dados(Workbench):**
     - Click em "Server" :
@@ -278,7 +279,7 @@ TRUNCATE TABLE cursos;
     - Selecione:
         - Start Import
 
-# GIF Import DB
+![ImportDump](https://github.com/augusto-vieira/Linguagem_SQL/blob/master/Gif/DumpImport.gif)
 
 ### Referência:
 - https://www.youtube.com/watch?v=Ofktsne-utM&list=PLHz_AreHm4dkBs-795Dsgvau_ekxg8g1r&ab_channel=CursoemV%C3%ADdeo
