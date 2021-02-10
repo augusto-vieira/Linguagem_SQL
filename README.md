@@ -246,6 +246,40 @@ LIMIT 3;
 TRUNCATE TABLE cursos;
 ```
 
+### Gerenciando Cópias de Segurança MySQL
+
+1. **Exportar um Dump do Banco de Dados(Workbench):**
+    - Click em "Server" :
+        - Click em "Data **Export**"
+    - Selecione os Bancos de Dados
+    - Selecione as opções de exportação:
+        - Dump Structure and Data
+        - Dump Data Only
+        - Dump Structure Only
+    - Selecione as opções de exportação do Projeto:
+        - Export to Dump Project Folder
+        - Export to Self-Contained File
+    - Selecione:
+        - Include Create Schema(Cria o banco automático)
+    - Selecione:
+        - Start Export
+    - Saída:
+        - Dump20210209.sql
+
+# Gif Export DB
+
+1. **Importar um Dump para o Banco de Dados(Workbench):**
+    - Click em "Server" :
+        - Click em "Data **Import**"
+    - Selecione a opção de importação:
+        - Import from Dump Project Folder
+        - Import from Self-Contained File
+            - Selecione o Dump(Dump20210209.sql)
+    - Selecione:
+        - Start Import
+
+# GIF Import DB
+
 ### Referência:
 - https://www.youtube.com/watch?v=Ofktsne-utM&list=PLHz_AreHm4dkBs-795Dsgvau_ekxg8g1r&ab_channel=CursoemV%C3%ADdeo
     
