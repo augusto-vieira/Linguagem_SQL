@@ -26,6 +26,7 @@ A linguagem SQL é dividida em subconjuntos de acordo com as operações que que
 
 
 2. **Comandos DML:**
+    - SELECT
     - INSERT
     - UPDATE
     - DELETE
